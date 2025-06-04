@@ -257,8 +257,8 @@
   <div id="gameModal" class="modal">
     <div class="modal-content">
       <h2 class="modal-title">Customize Window</h2>
-      <p>Enter a title for the new tab (e.g., "Hāpara"):</p>
-      <input type="text" id="tabTitle" class="modal-input" placeholder="Tab Title" value="Hāpara">
+      <p>Enter a title for the new tab (e.g., "Google"):</p>
+      <input type="text" id="tabTitle" class="modal-input" placeholder="Tab Title" value="Google">
       <p>Enter a favicon URL (optional):</p>
       <input type="text" id="faviconUrl" class="modal-input" placeholder="https://example.com/favicon.ico">
       <div class="modal-buttons">
@@ -322,6 +322,51 @@
         <h3 class="game-title">Sophie the Slug</h3>
         <p>Help Sophie navigate through challenging puzzles!</p>
       </div>
+      
+      <!-- Planetary Drift -->
+      <div
+        class="game-card"
+        onclick="prepareGame('https://idev.games/embed/planetary-drift')"
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTeS0ndQ1WEbAH0MW6AY3jaZbe7CvJYdjzpw&s"
+          alt="Planetary Drift"
+          class="game-icon"
+          onerror="this.src='https://via.placeholder.com/150?text=Planetary+Drift'"
+        />
+        <h3 class="game-title">Planetary Drift</h3>
+        <p>Drift through space in this cosmic racing adventure!</p>
+      </div>
+      
+      <!-- Medieval Farms Retro Farming Sim -->
+      <div
+        class="game-card"
+        onclick="prepareGame('https://idev.games/embed/medieval-farms-retro-farming-sim')"
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd0gpzybgf-lbr2LBKkgDWAYYBdse5S480yg&s"
+          alt="Medieval Farms Retro Farming Sim"
+          class="game-icon"
+          onerror="this.src='https://via.placeholder.com/150?text=Medieval+Farms'"
+        />
+        <h3 class="game-title">Medieval Farms</h3>
+        <p>Build your farming empire in medieval times!</p>
+      </div>
+      
+      <!-- Undisputed MMA -->
+      <div
+        class="game-card"
+        onclick="prepareGame('https://idev.games/embed/undisputed-mma')"
+      >
+        <img
+          src="https://construct-static.com/uploads/175676/4c105b90-7921-4feb-bcc3-468aa5e6bc85/c/1127746405/logo%20final-min.png"
+          alt="Undisputed MMA"
+          class="game-icon"
+          onerror="this.src='https://via.placeholder.com/150?text=Undisputed+MMA'"
+        />
+        <h3 class="game-title">Undisputed MMA</h3>
+        <p>Become the ultimate mixed martial arts champion!</p>
+      </div>
     </div>
 
     <div class="footer">
@@ -369,7 +414,7 @@
       const modal = document.getElementById('gameModal');
       modal.style.display = 'none';
       
-      const tabTitle = document.getElementById('tabTitle').value || 'Hāpara';
+      const tabTitle = document.getElementById('tabTitle').value || 'Google';
       const faviconUrl = document.getElementById('faviconUrl').value || 'https://www.google.com/favicon.ico';
       
       // Open a new window with about:blank
