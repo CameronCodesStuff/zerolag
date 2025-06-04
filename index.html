@@ -182,7 +182,6 @@
       }
     }
 
-    /* Modal styles */
     .modal {
       display: none;
       position: fixed;
@@ -253,11 +252,10 @@
 <body>
   <div class="particles" id="particles"></div>
 
-  <!-- The Modal -->
   <div id="gameModal" class="modal">
     <div class="modal-content">
       <h2 class="modal-title">Customize Window</h2>
-      <p>Enter a title for the new tab (e.g., "Google"):</p>
+      <p>Enter a title for the new tab:</p>
       <input type="text" id="tabTitle" class="modal-input" placeholder="Tab Title" value="Google">
       <p>Enter a favicon URL (optional):</p>
       <input type="text" id="faviconUrl" class="modal-input" placeholder="https://example.com/favicon.ico">
@@ -271,7 +269,6 @@
   <div class="container">
     <h1 class="glow">ZeroLag</h1>
 
-    <!-- Search bar -->
     <input
       type="text"
       id="searchBar"
@@ -323,7 +320,6 @@
         <p>Help Sophie navigate through challenging puzzles!</p>
       </div>
       
-      <!-- Planetary Drift -->
       <div
         class="game-card"
         onclick="prepareGame('https://idev.games/embed/planetary-drift')"
@@ -338,7 +334,6 @@
         <p>Drift through space in this cosmic racing adventure!</p>
       </div>
       
-      <!-- Medieval Farms Retro Farming Sim -->
       <div
         class="game-card"
         onclick="prepareGame('https://idev.games/embed/medieval-farms-retro-farming-sim')"
@@ -353,7 +348,6 @@
         <p>Build your farming empire in medieval times!</p>
       </div>
       
-      <!-- Undisputed MMA -->
       <div
         class="game-card"
         onclick="prepareGame('https://idev.games/embed/undisputed-mma')"
@@ -375,7 +369,6 @@
   </div>
 
   <script>
-    // Global variables to store game URL and new window reference
     let currentGameUrl = '';
     let newWindow = null;
 
@@ -417,19 +410,15 @@
       const tabTitle = document.getElementById('tabTitle').value || 'Google';
       const faviconUrl = document.getElementById('faviconUrl').value || 'https://www.google.com/favicon.ico';
       
-      // Open a new window with about:blank
       newWindow = window.open('about:blank');
       
-      // Set the title immediately
       newWindow.document.title = tabTitle;
       
-      // Create and add favicon
       const link = newWindow.document.createElement('link');
       link.rel = 'icon';
       link.href = faviconUrl;
       newWindow.document.head.appendChild(link);
       
-      // Create iframe for the game
       const iframe = newWindow.document.createElement('iframe');
       iframe.style.position = 'fixed';
       iframe.style.top = '0';
@@ -439,12 +428,10 @@
       iframe.style.border = 'none';
       iframe.src = currentGameUrl;
       
-      // Add iframe to the new window
       newWindow.document.body.appendChild(iframe);
       newWindow.document.body.style.margin = '0';
       newWindow.document.body.style.overflow = 'hidden';
       
-      // Add some generic content to make it look legit
       const header = newWindow.document.createElement('div');
       header.style.display = 'none'; // Hide it but keep it in DOM
       header.textContent = 'Loading educational content...';
@@ -464,7 +451,6 @@
     window.onload = () => {
       createParticles();
 
-      // Attach event listener after DOM loads
       document.getElementById('searchBar').addEventListener('input', filterGames);
 
       setInterval(() => {
